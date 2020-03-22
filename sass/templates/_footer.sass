@@ -1,0 +1,84 @@
+.footer
+  padding-top: 3rem
+  position: relative
+  background: $dark url(../img/footerBg.jpg) no-repeat center / cover
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba($dark, 0.9)
+  &__wrap
+    position: relative
+    background-color: $black
+    max-width: 63.07rem
+    margin: auto
+    margin-top: -19rem
+    margin-bottom: 3.714rem
+    padding: 2.5rem
+    display: block
+  &-title
+    text-transform: uppercase
+    font-family: 'Yeseva One', cursive
+    font-weight: normal
+    font-style: normal
+    font-size: 1.428rem
+    text-align: center
+    margin-bottom: 3.214rem
+  &__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 37.142rem
+    margin: auto
+  &__input
+    &-group
+      display: flex
+      flex-direction: column
+      flex-basis: 45%
+      min-height: 7rem
+      position: relative
+      &--full-with
+        flex-basis: 100%
+        margin-bottom: -1.7rem
+  &__policy
+    flex-basis: 100%
+    margin-bottom: 3.5rem
+  &__button
+    margin: auto
+    padding: 1.285rem 4.785rem
+  &__info
+    position: relative
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &__message
+        margin-right: 1.07rem
+        margin-bottom: 3.09rem
+      &__instagram
+        margin-bottom: 3.09rem
+    &__description  
+      text-align: center
+      font-family: 'Yeseva One', sans-serif
+      font-weight: normal
+      font-style: normal
+      font-size: 1.428rem
+      color: $primary
+      line-height: 2rem
+      text-transform: uppercase
+      &--bottom
+      margin-bottom: 1.857rem
+      &__word
+        display: block
+  &__map
+    margin-bottom: 4.642rem
+    min-height: 465px
+  &__menu
+    position: relative
+    background-color: $dark
+    padding: 4.285rem 0
+  &__block
+    min-height: 650px
