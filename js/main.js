@@ -81,8 +81,18 @@ $(document).ready(function () {
         required: " указать адрес электронной почты",
         email: "Введите в фомате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработаль. Ответ сервера:' + response);
+          
+        }
+      });
     }
-
   });
 
   $('.control__form').validate({
