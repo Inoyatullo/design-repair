@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=2824b2c2-b01c-4ce3-b067-f79ae9390c5f&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=2824b2c2-b01c-4ce3-b067-f79ae9390c5f&lang=ru_RU">
   </script>
 </head>
 <body>
@@ -174,17 +174,17 @@
         </p>
         <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group wow fadeInRight" data-wow-delay = "1.2s">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+            <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group wow fadeInRight" data-wow-delay = "1.2s">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input control__input input--dark" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button wow fadeInRight" data-wow-delay = "1.4s">Отправить</button>
           <div class="policy control__policy wow fadeIn" data-wow-delay = "1.5s">
-            <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="policy-checkbox" checked>
-            <label for="policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="control-policy-checkbox" checked>
+            <label for="control-policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
         </form>
@@ -449,7 +449,7 @@
           <div class="col-25 wow fadeInUp" data-wow-delay = "1s">
             <div class="card team__card">
               <img src="img/team1.1.jpg" alt="" class="image team__image">
-              <img src="img/Group 22.png" alt="" class="icon team__icon">
+              <img src="img/Group-22.png" alt="" class="icon team__icon">
               <div class="team__box">
                 <div class="team__box-inner">
                   <strong class="team__box-title team__box-title--bottom">Алексей Колмаков</strong>
@@ -464,7 +464,7 @@
           <div class="col-25 wow fadeInUp" data-wow-delay = "1.2s">
             <div class="card team__card">
               <img src="img/team1.2.jpg" alt="" class="image team__image">
-              <img src="img/Group 21.png" alt="" class="icon team__icon">
+              <img src="img/Group-21.png" alt="" class="icon team__icon">
               <div class="team__box">
                 <div class="team__box-inner">
                   <strong class="team__box-title team__box-title--bottom">Алиса Сухорукова</strong>
@@ -480,7 +480,7 @@
           <div class="col-25 wow fadeInUp" data-wow-delay = "1.4s">
             <div class="card team__card team__card--madia">
               <img src="img/team1.3.jpg" alt="" class="image team__image">
-              <img src="img/Group 23.png" alt="" class="icon team__icon">
+              <img src="img/Group-23.png" alt="" class="icon team__icon">
               <div class="team__box">
                 <div class="team__box-inner">
                   <strong class="team__box-title team__box-title--bottom">Давид Волынев</strong>
@@ -580,11 +580,11 @@
         <div class="footer-title">Остались вопросы?</div>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
+            <label for="footer-user-name" class="label form__label label--light">Имя</label>
             <input type="text" name="userName" class="input form__input input__bottom input--light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
+            <label for="footer-user-phone" class="label form__label label--light">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input input__bottom input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-with">
@@ -592,8 +592,8 @@
             <input type="text" name="userQuestion" class="input form__input input__bottom input--light" id="user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
-            <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="policy-checkbox" checked>
-            <label for="policy-checkbox" class="policy__label footer-policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="footer-policy-checkbox" checked>
+            <label for="footer-policy-checkbox" class="policy__label footer-policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="button button--primary footer__button">Отправить</button>
@@ -647,11 +647,11 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
       <form action="send.php" method="POST"  class="form modal__form">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
+          <label for="modal-user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
@@ -659,8 +659,8 @@
           <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
-          <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="policy-checkbox" checked>
-          <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
+          <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="modal-policy-checkbox" checked>
+          <label for="modal-policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
         <button class="button button--primary modal__button">Отправить заявку</button>
