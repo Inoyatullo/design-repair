@@ -88,7 +88,12 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработаль. Ответ сервера:' + response);
+          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса.', + response);
           
         }
       });
@@ -116,8 +121,23 @@ $(document).ready(function () {
       },
       userPhone: "Номер телефона обязательно",
       policyCheckbox: ""
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса.', + response);
+          
+        }
+      });
     }
-
   });
 
   $('.footer__form').validate({
@@ -145,8 +165,23 @@ $(document).ready(function () {
       userQuestion: {
         required: " задать вопрос",
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса.', + response);
+          
+        }
+      });
     }
-
   });
 
   // маска для телефона
