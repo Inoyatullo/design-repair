@@ -29,7 +29,15 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
-
+  var modalka = $('.modalka'),
+        modalkaBtn = $('[data-toggle="modalka"]');
+        closelkaBtn = $('.modalka__close');
+    modalkaBtn.on('click', function() {
+        modalka.toggleClass('modalka--visible');
+    });
+    closelkaBtn.on('click', function (){
+        modalka.toggleClass('modalka--visible');
+    });
 
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,

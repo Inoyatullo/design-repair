@@ -1338,6 +1338,97 @@ img {
     -ms-flex-item-align: end;
     align-self: flex-end; }
 
+.modalka {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 506px;
+  max-height: 509px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .modalka--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modalka__dialog {
+    position: relative;
+    max-width: 36.6rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    padding: 2.357rem 3.5rem 1.982rem;
+    color: #fff; }
+  .modalka__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url(../img/close.svg) no-repeat center;
+    border: none;
+    margin: 0.9rem;
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+    cursor: pointer; }
+  .modalka__button {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 20px 90px;
+    margin: 10px 20px;
+    margin-left: 26px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: none;
+    font-weight: 300;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+    .modalka__button::before, .modalka__button::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    .modalka__button::before {
+      bottom: 0;
+      left: 0;
+      border-left: 1px solid white;
+      border-top: 1px solid white;
+      -webkit-transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+      transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s; }
+    .modalka__button::after {
+      top: 0;
+      right: 0;
+      border-right: 1px solid white;
+      border-bottom: 1px solid white;
+      -webkit-transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
+      transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s; }
+    .modalka__button:hover {
+      background: rgba(255, 255, 255, 0.2); }
+      .modalka__button:hover::before, .modalka__button:hover::after {
+        height: 100%;
+        width: 100%;
+        opacity: 1; }
+      .modalka__button:hover::before {
+        -webkit-transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+        transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s; }
+      .modalka__button:hover::after {
+        -webkit-transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;
+        transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s; }
+
 .btn-top {
   display: none;
   position: fixed;
