@@ -11,6 +11,7 @@ require 'phpmailer/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail->CharSet = 'utf-8';
 
 try {
     //Server settings

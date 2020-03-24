@@ -82,7 +82,7 @@
     &__button
       margin-bottom: -22px
   .team
-    paddin-bottom: 0
+    padding-bottom: 0
     background-color: $dark
     color: $light
     &__card
@@ -170,3 +170,39 @@
 .control
   &__form
     max-width: 100%
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+  .hero
+    &__scroll-down
+      position: absolute
+      z-index: 3
+      display: flex
+      justify-content: center
+      align-items: center
+      left: 0
+      bottom: 0
+      min-width: 17.64rem
+      min-height: 6.92rem
+      background-color: $dark
+      text-decoration: none
+      text-transform: uppercase
+      color: $light
+      font-family: Yeseva One
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 138.6%
+      padding-top: 33px
+      &::after
+        content: ""
+        position: absolute
+        top: 25px
+        right: 25px
+        background: url(../img/errow_down.svg) no-repeat center
+        width: 30px
+        height: 30px
+        border: 2px solid $primary
+        border-radius: 50%
+  .swiper-container
+    position: relative
+    overflow: hidden

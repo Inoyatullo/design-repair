@@ -80,7 +80,14 @@ $(document).ready(function () {
       userEmail: {
         required: " указать адрес электронной почты",
         email: "Введите в фомате: name@domain.com"
+      },
+      policyCheckbox: ""
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
       }
+      error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({
@@ -121,6 +128,12 @@ $(document).ready(function () {
       },
       userPhone: "Номер телефона обязательно",
       policyCheckbox: ""
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({
@@ -164,7 +177,15 @@ $(document).ready(function () {
       userPhone: "Номер телефона обязательно",
       userQuestion: {
         required: " задать вопрос",
+      },
+      policyCheckbox: ""
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
       }
+  
+      error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({
@@ -183,7 +204,6 @@ $(document).ready(function () {
       });
     }
   });
-
   // маска для телефона
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7(___) __-__-___"}) 
 
