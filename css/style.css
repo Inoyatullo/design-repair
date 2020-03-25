@@ -589,7 +589,9 @@ img {
 
 .hero {
   position: relative;
+  display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1231,6 +1233,7 @@ img {
       .footer__info__description__word {
         display: block; }
   .footer__map {
+    position: relative;
     margin-bottom: 4.642rem;
     min-height: 465px; }
   .footer__menu {
@@ -1513,6 +1516,10 @@ img {
     margin: 0 auto; }
     .col-50--top {
       margin-top: 33px; }
+  .col-25 {
+    z-index: 10; }
+    .col-25--top {
+      margin-top: 33px; }
   .control {
     background-color: #131313;
     padding-bottom: 0;
@@ -1549,6 +1556,7 @@ img {
     .control__button {
       margin-bottom: -22px; }
   .team {
+    margin-top: -2px;
     padding-bottom: 0;
     background-color: #131313;
     color: #fff; }
@@ -1558,17 +1566,24 @@ img {
         margin-bottom: 0; }
     .team-text {
       display: none; }
+  .section-title__heading--dark {
+    color: #fff; }
   .section-text {
     color: #fff; }
+  .clients {
+    display: none; }
   .footer {
+    margin-top: -92px;
     padding-bottom: 2rem;
+    padding-top: 100px;
     background-image: none;
     background-color: #131313; }
     .footer__block {
       position: relative; }
     .footer__wrap {
       width: 100%;
-      background-color: #131313; }
+      background-color: #131313;
+      margin-top: 0; }
     .footer__form {
       display: block; }
     .footer__button {

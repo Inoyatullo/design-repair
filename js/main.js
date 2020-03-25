@@ -20,8 +20,8 @@
 
 $(document).ready(function () {
   var modal = $('.modal'),
-  modalBtn = $('[data-toggle="modal"]');
-  closeBtn = $('.modal__close');
+    modalBtn = $('[data-toggle="modal"]');
+    closeBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -30,14 +30,15 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
   var modalka = $('.modalka'),
-        modalkaBtn = $('[data-toggle="modalka"]');
-        closelkaBtn = $('.modalka__close');
-    modalkaBtn.on('click', function() {
-        modalka.toggleClass('modalka--visible');
-    });
-    closelkaBtn.on('click', function (){
-        modalka.toggleClass('modalka--visible');
-    });
+    modalkaBtn = $('[data-toggle="modalka"]');
+    closelkaBtn = $('.modalka__close');
+
+  modalkaBtn.on('click', function() {
+      modalka.toggleClass('modalka--visible');
+  });
+  closelkaBtn.on('click', function (){
+      modalka.toggleClass('modalka--visible');
+  });
 
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -103,8 +104,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
+          modalka.toggleClass('modalka--visible');
           modal.removeClass('modal--visible');
         },
         error: function (response) {
@@ -149,8 +150,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
+          modalka.toggleClass('modalka--visible');
           modal.removeClass('modal--visible');
         },
         error: function (response) {
@@ -201,8 +202,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлен, мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
+          modalka.toggleClass('modalka--visible');
           modal.removeClass('modal--visible');
         },
         error: function (response) {
@@ -217,7 +218,7 @@ $(document).ready(function () {
 
   // Функция ymaps.ready() будет вызвана, когда
 
-  ymaps.ready(function () {
+/*   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.750783, 37.592578],
             zoom: 9
@@ -248,7 +249,7 @@ $(document).ready(function () {
 
     myMap.geoObjects
         .add(myPlacemark);
-});
+}); */
 
 });
 
