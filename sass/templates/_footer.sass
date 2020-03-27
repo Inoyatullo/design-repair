@@ -38,11 +38,12 @@
       display: flex
       flex-direction: column
       flex-basis: 45%
-      min-height: 7rem
+      // min-height: 7rem
+      margin-bottom: 3.2rem
       position: relative
       &--full-with
         flex-basis: 100%
-        margin-bottom: -1.7rem
+        // margin-bottom: -1.7rem
   &__policy
     flex-basis: 100%
     margin-bottom: 3.5rem
@@ -75,11 +76,26 @@
         display: block
   &__map
     position: relative
-    margin-bottom: 4.642rem
-    min-height: 465px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 4.7rem
+    filter: grayscale(1)
+    width: 100%
+    max-width: 925px
+    box-shadow: 0 20px 30px rgba(0,0,0,.15)
+    &>iframe
+      width: 100%
   &__menu
     position: relative
     background-color: $dark
     padding: 4.285rem 0
+  &__logo
+    color: $primary
+    text-decoration: none
   &__block
     min-height: 650px
+  &__map
+    min-height: 465px
+    width: 100%
+    margin: unset
+    border: 0

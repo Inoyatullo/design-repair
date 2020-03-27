@@ -8,6 +8,34 @@
   .nav
     &__item
       margin-right: 1rem
+  #userCheckbox-error
+    left: 240px
+    top: 43px 
+  #footerCheckbox-error
+    left: 285px
+    top: 315px
+  .clients
+    &__card
+      &__image
+        margin-right: 1.342rem
+      &-upper
+        &__heading
+          font-size: 1rem
+      &-lower
+        min-height: 25rem
+@media screen and ( max-width:1080px)
+  .clients
+    &__card
+      &__image
+        margin-right: 1.142rem
+      &-lower
+        min-height: 28rem
+      &__button
+        &__square
+          font-size: 1rem
+          padding: 1.219rem 0 1.246rem 0rem
+          &__image
+            padding: 0.785rem 1.099rem 0.832rem 0rem
 @media screen and ( max-width:992px)
   html
     font-size: 10px
@@ -19,6 +47,68 @@
       display: none
     &__content
       margin-left: 0
+  .footer__map>iframe 
+    max-height: 400px
+  .footer
+    &__block
+      min-height: 573px
+  .button:hover
+    cursor: auto
+  .button--primary:hover
+    box-shadow: 0px 5px 15px rgba($primary, 0.2s)
+  #userCheckbox-error
+    left: 200px
+    top: 43px 
+  #footerCheckbox-error
+    left: 240px
+    top: 275px
+
+@media screen and ( max-width:920px)
+  .row
+    flex-direction: column
+    align-items: center
+  .swiper
+    &-pagination
+      margin-left: 30px
+      margin-bottom: 2px
+    &-button 
+      &-prev 
+        margin-left: 30px
+      &-next 
+        margin-left: 30px
+    &__mobile 
+      width: 100%
+      &__image 
+        margin-top: 2.85rem
+    &-slide
+      &__heading
+        font-size: 1rem
+  .types 
+    padding-top: 2rem
+    &__card
+      margin-bottom: 5.642rem
+  .designs 
+    padding-bottom: 0
+    margin-top: 0
+    &__card
+      margin-bottom: 8rem
+  .team
+    margin-top: -2px
+    padding-bottom: 0
+    padding-top: 0
+    &__card
+      margin-bottom: 11.93rem
+      &--madia
+        margin-bottom: 0
+  .clients
+    &__card
+      margin-bottom: 8rem
+      &-upper
+        &__heading
+          font-size: 1.285rem
+          max-width: 150px
+      &-lower
+        min-height: 22rem
 @media screen and ( max-width:760px)
   html
     font-size: 12px
@@ -26,19 +116,48 @@
     flex-direction: column
     align-items: center
   .types 
-    padding-top: 4.15rem
+    padding-top: 5.92rem
     &__card
-      margin-bottom: 5rem
+      margin-bottom: 5.642rem
   .card
     &__text
       margin-left: 0
+  
+  #userCheckbox-error
+    left: 20px
+    top: 43px 
+  #footerCheckbox-error
+    left: 105px
+    top: 405px
+  em.invalid
+    position: absolute
+    bottom: -27px
+    left: 0
+    width: 100%
+  .swiper
+    &-pagination
+      margin-left: 30px
+      margin-bottom: 2px
+    &-button 
+      &-prev 
+        margin-left: 30px
+      &-next 
+        margin-left: 30px
+    &__mobile 
+      width: 100%
+      &__image 
+        margin-top: 2.85rem
+    &-slide
+      &__heading
+        font-size: 1rem
 @media screen and ( max-width:760px)
-  .row
+  .row 
     flex-direction: column
     align-items: center
   .designs 
+    padding-bottom: 0
     &__card
-      margin-bottom: 5rem
+      margin-bottom: 8rem
   .card
     &__text
       margin-left: 0
@@ -54,11 +173,6 @@
       &__text
         max-width: 80%
   .col
-    &-50
-      max-width: 100%
-      margin: 0 auto
-      &--top 
-        margin-top: 33px
     &-25
       z-index: 10
       &--top 
@@ -72,14 +186,18 @@
       margin-top: 0
     &__input-group
       order: -4
+      margin-bottom: 4.5rem
     &__form
       display: flex
       justify-content: center
       flex-direction: column
       max-width: 80%
       margin: auto
+    &__input
+      color: $light
     &__policy
       order: -3
+      margin-top: -20px
       margin-bottom: 8.1rem
       &-label
         justify-content: start
@@ -88,6 +206,7 @@
   .team
     margin-top: -2px
     padding-bottom: 0
+    padding-top: 0
     background-color: $dark
     color: $light
     &__card
@@ -105,6 +224,8 @@
       color: $light
   .clients
     display: none
+  .footer__map>iframe 
+    max-height: 350px
   .footer
     margin-top: -92px
     padding-bottom: 2rem
@@ -113,6 +234,7 @@
     background-color: $dark
     &__block
       position: relative
+      min-height: 540px
     &__wrap
       width: 100%
       background-color: $dark
@@ -127,6 +249,7 @@
       left: 0
       right: 0
       margin-bottom: 0
+      min-height: 18.214rem
     &__info
       position: absolute
       bottom: 0
@@ -161,30 +284,64 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
-  .col
-    &-50
-      max-width: 80%
-      margin: 0 auto
-      &--top 
-        margin-top: 33px
+  .control
+    &__video
+      min-height: 270px
+  .footer
+    &__block
+      min-height: 520px
+  #footerCheckbox-error
+    left: 50px
+    top: 405px
 @media screen and ( max-width:520px)
   .hero
     &__scroll-down
       display: none
-  .col
+  /** .col
     &-50
       max-width: 100%
       margin: 0 auto
       &--top 
-        margin-top: 33px
-.section
-  &-title
-    &__text
-        max-width: 90%
-.control
-  &__form
-    max-width: 100%
-
+        margin-top: 33px **/
+  .section
+    &-title
+      &__text
+          max-width: 90%
+  .control
+    &__form
+      max-width: 100%
+    &__video
+      max-width: 400px
+      min-height: 250px
+  .footer__map>iframe 
+    max-height: 350px
+  .footer
+    &__map
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      margin-bottom: 0
+    &__block
+      min-height: 520px
+@media screen and ( max-width:480px)
+  .footer__map>iframe 
+    max-height: 300px
+  .footer
+    &__block
+      min-height: 495px
+    &__info
+      &__description  
+        font-size: 1.285rem
+@media screen and ( max-width:405px)
+  .footer
+    &__block
+      min-height: 450px
+    &__info
+      &__description  
+        font-size: 1.14rem
+  .footer__map>iframe 
+    max-height: 250px
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
   .hero
     &__scroll-down
@@ -217,6 +374,17 @@
         height: 30px
         border: 2px solid $primary
         border-radius: 50%
-  .swiper-container
-    position: relative
-    overflow: hidden
+  .section
+    &-title
+      &__word
+        display: flex
+        align-items: center
+        &::after
+          content: ""
+          position: absolute
+          bottom: -100px
+          width: 90px
+          height: 2px
+          background-color: $primary
+          margin-left: 2rem 
+  

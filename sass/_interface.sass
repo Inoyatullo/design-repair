@@ -2,6 +2,7 @@
   padding: 18px 28px
   border-radius: 2px
   border: none
+  outline: none
   text-transform: uppercase
   font-size: 0.928rem
   &:hover
@@ -24,6 +25,7 @@
     color: rgba($light, 0.5)
 .input
   background-color: transparent
+  outline: none
   border: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   font-size: 1.285rem
@@ -63,12 +65,28 @@
 input 
   &.invalid
     border-bottom: 1px solid tomato
+label
+  &.invalid
+    
 em.invalid
+  position: absolute
+  bottom: -17px
+  left: 0
+div.invalid
   position: absolute
   bottom: -20px
   left: 0
-  width: 100%
 .invalid
   color: tomato
+  font-size: 14px
 #policyCheckbox-error
   color: tomato
+#footerCheckbox-error
+  left: 340px
+  top: 315px
+#modalCheckbox-error
+  top: 395px
+  left: 65px
+#userCheckbox-error
+  left: 270px
+  top: 43px 

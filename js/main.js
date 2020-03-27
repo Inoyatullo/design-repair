@@ -18,7 +18,50 @@
 });
 }); */
 
+(function() {
+  var btnScrollDown = document.querySelector('#scroll_down');
+  function scrollDown() {
+    var windowCoords = document.documentElement.clientHeight;
+    (function scroll() {
+      if (window.pageYOffset < windowCoords) {
+        window.scrollBy(0, 10);
+        setTimeout(scroll, 0);
+      }
+      if (window.pageYOffset > windowCoords) {
+        window.scrollTo(0, windowCoords);
+      }
+    })();
+  }
+  btnScrollDown.addEventListener('click', scrollDown);
+})();
+
+
+
+const map = document.querySelector(".map");
+const control = document.querySelector('.control')
+map.setAttribute('style', 'display: none');
+control.setAttribute('style', 'display: none');
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  (scrollTop>3700) ? map.setAttribute('style', 'display: block') :   map.setAttribute('style', 'display: none');
+  (scrollTop>700) ? control.setAttribute('style', 'display: block') :   control.setAttribute('style', 'display: none');
+});
+
 $(document).ready(function () {
+
+  $("#top-menu").on("click", "a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор бока с атрибута href
+    var id = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({
+        scrollTop: top
+    }, 1000);
+  });
+
   var modal = $('.modal'),
     modalBtn = $('[data-toggle="modal"]');
     closeBtn = $('.modal__close');
@@ -59,10 +102,9 @@ $(document).ready(function () {
   next.css('left', prev.width() +15 +bullets.width() +15)
   bullets.css('left', prev.width() +15)
 
-  new WOW().init();
 
   $('.modal__form').validate({
-    errorElement: "div",
+    errorElement: "em",
     errorClass: "invalid",
     rules: {
       // simple rule, converted to {required:true}
@@ -77,7 +119,7 @@ $(document).ready(function () {
         required: true,
         email: true
       },
-      policyCheckbox: "required"
+      modalCheckbox: "required"
     },
     messages: {
       userName: {
@@ -90,7 +132,7 @@ $(document).ready(function () {
         required: " указать адрес электронной почты",
         email: "Введите в фомате: name@domain.com"
       },
-      policyCheckbox: ""
+      modalCheckbox: "Обработка обязательна"
     },
     errorPlacement: function (error, element) {
       if (element.attr("type") == "checkbox") {
@@ -127,7 +169,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      policyCheckbox: "required"
+      userCheckbox: "required"
     },
     messages: {
       userName: {
@@ -135,8 +177,8 @@ $(document).ready(function () {
         minlength: "Имя не короче двух символов",
         maxlength: "Имя не больше 15 символов"
       },
-      userPhone: "Номер телефона обязательно",
-      policyCheckbox: ""
+      userPhone: "Номер телефона",
+      userCheckbox: "Обработка обязательна"
     },
     errorPlacement: function (error, element) {
       if (element.attr("type") == "checkbox") {
@@ -175,7 +217,7 @@ $(document).ready(function () {
       userPhone: "required",
       // compound rule
       userQuestion: "required",
-      policyCheckbox: "required"
+      footerCheckbox: "required"
     },
     messages: {
       userName: {
@@ -187,7 +229,7 @@ $(document).ready(function () {
       userQuestion: {
         required: " задать вопрос",
       },
-      policyCheckbox: ""
+      footerCheckbox: "Обработка обязательна"
     },
     errorPlacement: function (error, element) {
       if (element.attr("type") == "checkbox") {
@@ -216,40 +258,20 @@ $(document).ready(function () {
   // маска для телефона
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7(___) __-__-___"}) 
 
-  // Функция ymaps.ready() будет вызвана, когда
-
-/*   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.750783, 37.592578],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/marker.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-
-    myMap.geoObjects
-        .add(myPlacemark);
-}); */
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '434',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': playVideo,
+      }
+    });
+  })
+  function playVideo(event) {
+    event.target.playVideo();
+  }
 
 });
 
